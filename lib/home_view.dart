@@ -16,11 +16,7 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF).withOpacity(0.2),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Center(child: Image.asset(Constants.logo, height: 40)),
-      ),
+      appBar: appBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,8 +32,6 @@ class _FirstScreenState extends State<FirstScreen> {
                   txt2: text2(0),
                   img: image(0),
                   onTap: () {
-                    debugPrint("first screen");
-
                     Navigator.push(
                         context, CustomPageRoute(const SecondScreen()));
                     setState(() {
@@ -52,8 +46,6 @@ class _FirstScreenState extends State<FirstScreen> {
                   txt2: text2(1),
                   img: image(1),
                   onTap: () {
-                    debugPrint("first screen");
-
                     Navigator.push(
                         context, CustomPageRoute(const SecondScreen()));
                     setState(() {
@@ -75,8 +67,6 @@ class _FirstScreenState extends State<FirstScreen> {
                   height: 100,
                   width: 100,
                   onTap: () {
-                    debugPrint("first screen");
-
                     Navigator.push(
                         context, CustomPageRoute(const SecondScreen()));
                     setState(() {
@@ -93,8 +83,6 @@ class _FirstScreenState extends State<FirstScreen> {
                   height: 100,
                   width: 100,
                   onTap: () {
-                    debugPrint("first screen");
-
                     Navigator.push(
                         context, CustomPageRoute(const SecondScreen()));
                     setState(() {
@@ -129,10 +117,10 @@ class _SecondScreenState extends State<SecondScreen> {
         heroTag: i,
         index: i,
         txt1: _selectedIndex == i ? '${text1(i)} ${text2(i)}' : text1(i),
-        txt2: _selectedIndex == i ? 'Now Playing ...' : text2(i),
+        txt2: _selectedIndex == i ? 'Now Playing....' : text2(i),
         img: image(i),
-        height: _selectedIndex == i ? 200 : 100,
-        width: _selectedIndex == i ? 200 : 100,
+        height: _selectedIndex == i ? 180 : 100,
+        width: _selectedIndex == i ? 180 : 100,
         color: _selectedIndex == i ? Colors.red : Colors.black,
         onTap: () {
           if (_selectedIndex == i) {
@@ -156,12 +144,7 @@ class _SecondScreenState extends State<SecondScreen> {
     }
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF).withOpacity(0.2),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        title: Center(child: Image.asset(Constants.logo, height: 40)),
-      ),
+      appBar: appBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -200,10 +183,10 @@ class _ThirdScreenState extends State<ThirdScreen> {
         heroTag: i,
         index: i,
         txt1: _selectedIndex == i ? '${text1(i)} ${text2(i)}' : text1(i),
-        txt2: _selectedIndex == i ? 'Now Playing ...' : text2(i),
+        txt2: _selectedIndex == i ? 'Now Playing....' : text2(i),
         img: image(i),
-        height: _selectedIndex == i ? 200 : 100,
-        width: _selectedIndex == i ? 200 : 100,
+        height: _selectedIndex == i ? 180 : 100,
+        width: _selectedIndex == i ? 180 : 100,
         color: _selectedIndex == i ? Colors.red : Colors.black,
         onTap: () {
           if (_selectedIndex == i) {
@@ -223,12 +206,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
     }
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF).withOpacity(0.2),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        title: Center(child: Image.asset(Constants.logo, height: 40)),
-      ),
+      appBar: appBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

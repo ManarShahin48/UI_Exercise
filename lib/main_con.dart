@@ -12,8 +12,8 @@ class MainContainer extends StatelessWidget {
     this.width = 100,
     this.height = 100,
     this.color = Colors.black,
-    this.fontSize1 = 23,
-    this.fontSize2 = 20,
+    this.fontSize1 = 18,
+    this.fontSize2 = 18,
     required this.heroTag,
   }) : super(key: key);
 

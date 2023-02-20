@@ -102,3 +102,10 @@ class CustomPageRoute<t> extends PageRoute<t> {
     );
   }
 }
+
+PreferredSizeWidget appBar() => AppBar(
+      backgroundColor: Colors.transparent,
+      automaticallyImplyLeading: false,
+      elevation: 0,
+      title: Center(child: Image.asset(Constants.logo, height: 30)),
+    );
