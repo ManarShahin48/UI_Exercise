@@ -30,3 +30,75 @@ class Constants {
     return MaterialColor(color.value, swatch);
   }
 }
+
+String text1(int i) {
+  switch (i) {
+    case 0:
+      return 'Smart';
+    case 1:
+      return 'Digital';
+    case 2:
+      return 'Security';
+    case 3:
+      return 'Health';
+    default:
+      return 'default';
+  }
+}
+
+String text2(int i) {
+  switch (i) {
+    case 0:
+      return 'Cities';
+    case 1:
+      return 'Transformation';
+    case 2:
+      return '';
+    case 3:
+      return '';
+    default:
+      return 'default';
+  }
+}
+
+String image(int i) {
+  switch (i) {
+    case 0:
+      return Constants.smartCities;
+    case 1:
+      return Constants.dt;
+    case 2:
+      return Constants.security;
+    case 3:
+      return Constants.healthy;
+    default:
+      return Constants.space;
+  }
+}
+
+class CustomPageRoute<t> extends PageRoute<t> {
+  final Widget child;
+
+  CustomPageRoute(this.child);
+
+  @override
+  Color get barrierColor => Colors.black;
+
+  @override
+  String get barrierLabel => '';
+
+  @override
+  bool get maintainState => true;
+
+  @override
+  Duration get transitionDuration => const Duration(seconds: 1);
+
+  @override
+  Widget buildPage(BuildContext context, Animation<double> animation,
+      Animation<double> secondaryAnimation) {
+    return FadeTransition(
+      opacity: animation,
+      child: child,
+    );
+  }
+}
